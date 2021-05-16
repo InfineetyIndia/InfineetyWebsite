@@ -76,12 +76,21 @@ WSGI_APPLICATION = 'infinity.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'infinity',
+    #     'USER': 'root',
+    #     'PASSWORD': 'tech',
+    #     'HOST': 'localhost',
+    #     'PORT': '3306'
+    # }
+
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'infinity',
-        'USER': 'root',
-        'PASSWORD': 'tech',
-        'HOST': 'localhost',
+        'USER': 'infinity',
+        'PASSWORD': 'infinity',
+        'HOST': 'infinity.covtigb2stq9.ap-south-1.rds.amazonaws.com',
         'PORT': '3306'
     }
 }
