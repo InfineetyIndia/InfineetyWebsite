@@ -1,0 +1,99 @@
+.footer {
+  @include fullwidth();
+  margin: 0;
+  padding: 3% 0;
+  background: #363636;
+  color: #FFF;
+  font-size: $fontSmall;
+  h4 {
+    color: #E5E4E4;
+    font-weight: $semibold;
+    letter-spacing: 1px;
+  }
+  .suscribe-btn {
+    font-size: 22px;
+    font-weight: 500;
+    background: #ebe0e0;
+    color: #3365a1;
+    padding: 10px 40px;
+    box-shadow: 6px 5px 10px rgba($color: #000000, $alpha: 0.4);
+    @include border-radius(5px);
+    @include breakpoint(sm) {
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+  }
+  .pt30 {
+    @include breakpoint(xs) {
+      padding-top: 10px;
+    }
+  }
+  .footer-items {
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint(xs) {
+      display: inherit;
+    }
+    .block {
+      @include breakpoint(xs) {
+        padding-bottom: 20px;
+      }
+      &:nth-child(2) {
+        text-align: center;
+        @include breakpoint(xs) {
+          text-align: left;
+        }
+      }
+      &:last-child {
+        text-align: right;
+        @include breakpoint(xs) {
+          text-align: left;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+  
+  .social-links {
+    margin: 0;
+    padding: 0;
+    display: block;
+    flex-wrap: inherit;
+    @include breakpoint(xs) {
+      text-align: $left;
+    }
+    li {
+      display: inline-block;
+      margin: 0;
+      padding: 0 10px 0 0;
+      &:last-child {
+        padding-right: 0;
+      }
+      a {
+        color: #E5E4E4;
+        font-size: 25px;
+      }
+    }
+  }
+
+  .footer-links {
+    margin: 0;
+    padding: 0;
+    display: block;
+    flex-wrap: inherit;
+    li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      line-height: 35px;
+      a {
+        color: #E5E4E4;
+        font-size: $fontMedium;
+        &:hover {
+          color: #E5E4E4;
+        }
+      }
+    }
+  }
+}

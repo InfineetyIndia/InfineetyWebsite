@@ -1,0 +1,476 @@
+.banner {
+  clear: both;
+  padding: 0;
+  position: relative;
+  @include breakpoint(md) {
+    background: #3365a1;
+    padding: 20px 0;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    background: #FFF;
+    width: 30%;
+    height: 100%;
+    left: 0;
+    @include breakpoint(md) {
+      content: none;
+    }
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    background: #3365a1;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    @include breakpoint(md) {
+      content: none;
+    }
+  }
+  h4 {
+    padding-bottom: 20px;
+  }
+  .videos-btn {
+    font-size: 22px;
+    font-weight: 700;
+    background: #ebe0e0;
+    color: #3365a1;
+    padding: 10px 40px;
+    box-shadow: 6px 5px 10px rgba($color: #000000, $alpha: 0.4);
+    @include border-radius(5px);
+  }
+  .videos-btn + .videos-btn{
+    margin-left: 40px;
+  }
+  .banner-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+
+    @include breakpoint(md) {
+      display: inherit;
+    }
+    .block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      flex-direction: column;
+      &:first-child {
+        width: 25%;
+        @include breakpoint(md) {
+          width: 100%;
+        }
+      }
+      &:last-child {
+        width: 75%;
+        text-align: center;
+        color: #EBE0E0;
+        background: #3365a1 url(../images/banner-bg.jpg) no-repeat;
+        height: 243px;
+        @include breakpoint(md) {
+          width: 100%;
+          height: inherit;
+          background: transparent;
+        }
+      }
+      h4 {
+        font-style: italic;
+        line-height: 40px;
+      }
+    }
+  }
+
+}
+.videos-wrap {
+  clear: both;
+  padding: 3% 0;
+  background: #EBE0E0;
+  h2 {
+    text-align: center;
+    position: relative;
+    display: table;
+    margin: 0 auto 30px;
+    font-style: italic;
+    &:before {
+      content: "";
+      width: 150px;
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      left: -150px;
+      transform: translateY(-50%);
+      background: rgba($color: #000000, $alpha: 0.8);
+      @include breakpoint(xs) {
+        width: 20px;
+        left: -20px;
+      }
+    }
+    &:after {
+      content: "";
+      width: 150px;
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      right: -150px;
+      transform: translateY(-50%);
+      background: rgba($color: #000000, $alpha: 0.8);
+      @include breakpoint(xs) {
+        width: 20px;
+        right: -20px;
+      }
+    }
+    span {
+      padding: 0 50px;
+      color: rgba($color: #000000, $alpha: 0.8);
+      @include breakpoint(xs) {
+        padding: 0 20px;
+      }
+    }
+  }
+  .videos-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -15px;
+    @include breakpoint(md) {
+      flex-wrap: wrap;
+    }
+    @include breakpoint(xs) {
+      display: inherit;
+    }
+    li {
+      width: 20%;
+      padding: 0 15px;
+      @include breakpoint(md) {
+        width: 50%;
+        padding-bottom: 20px;
+      }
+      @include breakpoint(xs) {
+        width: 100%;
+        padding-bottom: 20px;
+      }
+      figure {
+        img {
+          width: 100%;
+          max-width: 100%;
+          max-height: 100%;
+          @include border-radius(5px);
+        }
+      }
+      figcaption {
+        padding: 10px 0 0 0;
+        text-align: center;
+        h5 {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+.syllabus-wrap {
+  clear: both;
+  padding: 3% 0;
+  background: #EBE0E0;
+  h2 {
+    text-align: center;
+    position: relative;
+    display: table;
+    margin: 0 auto 30px;
+    font-style: italic;
+    &:before {
+      content: "";
+      width: 150px;
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      left: -150px;
+      transform: translateY(-50%);
+      background: rgba($color: #000000, $alpha: 0.8);
+      @include breakpoint(xs) {
+        width: 20px;
+        left: -20px;
+      }
+    }
+    &:after {
+      content: "";
+      width: 150px;
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      right: -150px;
+      transform: translateY(-50%);
+      background: rgba($color: #000000, $alpha: 0.8);
+      @include breakpoint(xs) {
+        width: 20px;
+        right: -20px;
+      }
+    }
+    span {
+      padding: 0 50px;
+      color: rgba($color: #000000, $alpha: 0.8);
+      @include breakpoint(xs) {
+        padding: 0 20px;
+      }
+    }
+  }
+  .syllabus-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -15px;
+    @include breakpoint(xs) {
+      display: inherit;
+    }
+    li {
+      width: 33.3%;
+      padding: 0 15px;
+      @include breakpoint(md) {
+        width: 50%;
+      }
+      @include breakpoint(xs) {
+        width: 100%;
+        padding-bottom: 20px;
+      }
+      figure {
+        img {
+          width: 100%;
+          max-width: 100%;
+          max-height: 100%;
+          @include border-radius(5px);
+        }
+      }
+      figcaption {
+        padding: 10px 0 0 0;
+        text-align: center;
+        h5 {
+          font-weight: 500;
+          font-style: italic;
+        }
+      }
+    }
+  }
+}
+
+.features-wrap {
+  clear: both;
+  padding: 3% 0;
+  background: #EBE0E0;
+  h2 {
+    text-align: center;
+    position: relative;
+    display: table;
+    margin: 0 auto 30px;
+    font-style: italic;
+    &:before {
+      content: "";
+      width: 150px;
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      left: -150px;
+      transform: translateY(-50%);
+      background: rgba($color: #000000, $alpha: 0.8);
+      @include breakpoint(xs) {
+        width: 20px;
+        left: -20px;
+      }
+    }
+    &:after {
+      content: "";
+      width: 150px;
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      right: -150px;
+      transform: translateY(-50%);
+      background: rgba($color: #000000, $alpha: 0.8);
+      @include breakpoint(xs) {
+        width: 20px;
+        right: -20px;
+      }
+    }
+    span {
+      padding: 0 50px;
+      color: rgba($color: #000000, $alpha: 0.8);
+      @include breakpoint(xs) {
+        padding: 0 20px;
+      }
+    }
+  }
+  .features-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -15px;
+    @include breakpoint(xs) {
+      display: inherit;
+    }
+    li {
+      width: 33.3%;
+      padding: 0 15px 30px;
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      @include breakpoint(md) {
+        width: 50%;
+      }
+      @include breakpoint(xs) {
+        width: 100%;
+        display: inherit;
+      }
+      figure {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 120px;
+        height: 120px;
+        border: 2px solid #3365A1;
+        @include border-radius(100%);
+        @include breakpoint(xs) {
+          margin: auto;
+        }
+        img {
+          max-width: 100%;
+          max-height: 100%;
+          @include border-radius(100%);
+        }
+      }
+      figcaption {
+        padding: 10px 0 0 0;
+        text-align: center;
+        h5 {
+          font-weight: 500;
+        }
+        p {
+          margin-bottom: 10px;
+        }
+      }
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.testimonial-wrap {
+  clear: both;
+  padding: 3% 0;
+  background: #EBE0E0;
+  h2 {
+    text-align: center;
+    position: relative;
+    display: table;
+    margin: 0 auto 30px;
+    font-style: italic;
+    &:before {
+      content: "";
+      width: 150px;
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      left: -150px;
+      transform: translateY(-50%);
+      background: rgba($color: #000000, $alpha: 0.8);
+      @include breakpoint(xs) {
+        width: 20px;
+        left: -20px;
+      }
+    }
+    &:after {
+      content: "";
+      width: 150px;
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      right: -150px;
+      transform: translateY(-50%);
+      background: rgba($color: #000000, $alpha: 0.8);
+      @include breakpoint(xs) {
+        width: 20px;
+        right: -20px;
+      }
+    }
+    span {
+      padding: 0 50px;
+      color: rgba($color: #000000, $alpha: 0.8);
+      @include breakpoint(xs) {
+        padding: 0 20px;
+      }
+    }
+  }
+
+  .carousel-inner {
+    .block {
+      display: flex;
+      align-items: center;
+      figcaption {
+        padding-left: 30px;
+        small {
+          float: right;
+        }
+      }
+    }
+  }
+
+  /* carousel */
+
+/* indicator position */
+#quote-carousel .carousel-indicators {
+  right: 50%;
+  top: auto;
+  bottom: -10px;
+  margin-right: -19px;
+	color:#60dfe5;
+}
+/* indicator color */
+#quote-carousel .carousel-indicators li {
+  background: #333333;
+	height:4px;
+  width:50px;
+}
+/* active indicator */
+#quote-carousel .carousel-indicators .active {
+  background: #60dfe5;
+  height:4x;
+  width:50px;
+  margin-bottom:1px;
+}
+
+
+}
+
+
+.journey-wrap {
+  clear: both;
+  padding: 3% 0;
+  h4 {
+    padding-bottom: 20px;
+    text-align: center;
+    font-style: italic;
+  }
+  .item-block {
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint(xs) {
+      display: inherit;
+    }
+    .block {
+      border: 1px solid #3365A1;
+      padding: 10px 30px;
+      color: #3365A1;
+      text-align: center;
+      font-size: $fontExtraLarge;
+      width: 30%;
+      @include breakpoint(md) {
+        width: 48%;
+      }
+      @include breakpoint(xs) {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
