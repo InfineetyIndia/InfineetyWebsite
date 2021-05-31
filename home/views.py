@@ -14,5 +14,8 @@ from home.forms import SignUpForm
 def index(request):
     form = SignUpForm()
     return render(request, "index.html", {'form': form})
+
+def subscription(resquest):
+    return HttpResponse('hi')
     
 
