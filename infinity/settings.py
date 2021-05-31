@@ -27,8 +27,8 @@ SECRET_KEY = 'django-insecure-vae&ls!#v5ld$u4c)few#1s%ez@lyd#32o)8himf-p%-+k*p2!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ['ec2-13-232-49-253.ap-south-1.compute.amazonaws.com','0.0.0.0','infineety.com','3.108.45.28']
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['ec2-13-232-49-253.ap-south-1.compute.amazonaws.com','0.0.0.0','infineety.com','3.108.45.28']
+#ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -157,3 +157,4 @@ PAYTM_SECRET_KEY = '3KeyrC4z@6htB7c&'
 PAYTM_WEBSITE = 'WEBSTAGING'
 PAYTM_CHANNEL_ID = 'WEB'
 PAYTM_INDUSTRY_TYPE_ID = 'Retail'
+CALLBACK_URL='http://infineety.com/callback/'
