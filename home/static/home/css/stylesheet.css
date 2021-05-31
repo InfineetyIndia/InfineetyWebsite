@@ -112,6 +112,53 @@ padding-top:4%;
   background: #55ACEE;
   color: white;
 }
+.fa-rupee{
+font-size:15px;
+height:15px;
+}
+.fa-rupee:hover{
+color:black;
+opacity:1;
+}
+.flex-container{
+display:flex;
+flex-wrap:wrap;
+}
+.subscribe_div{
+flex:30%;
+padding:0 3%;
+text-align:center;
+}
+.perSub{
+font-weight:normal;
+color:#807f7d;
+}
+.subscribe_btn{
+width:25%;
+margin-bottom:5%;
+margin-top:2%;
+}
+
+.form-group{
+margin-bottom:0px;
+}
+.testimonial{
+background-color:#f6f7f;
+}
+.body_headerText{
+color:#a8adad;
+font-size:22px;
+font-weight:normal;
+font-style:italic;
+margin-bottom:4%;
+}
+
+.details{
+border-radius:10px;
+border:2px solid #dadde3;
+padding:2%;
+margin:4%;
+}
 .footer>ul>li>a{
 color:white;
 text-decoration:none;
@@ -132,4 +179,23 @@ text-decoration:underline;
 .fa-youtube {
   background: #bb0000;
   color: white;
+}
+/*for body header*/
+.body_header{
+font-weight:bold;
+margin-top:5%;
+text-transform:uppercase;
+text-align:center;
+}
+.form_well{
+width:80%;
+margin:1% auto;
+}
+.testimonial_heading{
+font-size:120%;
+font-weight:bold;
+}
+.testimonial_subhead{
+font-style:italic;
+font-size:100%;
 }

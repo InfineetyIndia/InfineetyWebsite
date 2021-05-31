@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>INFINEETY'S Academy</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="css/stylesheet.css">
+ 
+<style type="text/css">
+.navbar{
+margin-bottom:0px;
+}
+.navbar-default{
+background-color:#ffffff;
+}
+.banner_text{
+color:#3365a2;
+font-weight:bold;
+}
+.banner_div{
+text-align:center;
+margin-top:5%;
+}
+.flex-container{
+display:flex;
+}
+.nav-pills a:hover{
+background-color:none;
+}
+.navbar-nav>li>a {
+line-height:60px;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+  .navbar-nav {
+    margin-left:5%;
+  }
+.mob_banner{
+display:none;
+}
+}
+
+@media only screen and (max-width: 600px) {
+ .mob_banner{
+display:block;
+background-color:#eeeff3;
+text-align:center;
+margin-top:2%;
+}
+.web_banner{
+display:none;
+}
+div.navbar-header{
+min-height:80px;
+}
+}
+
+
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">
+<img src="images/logo1.png" alt="logo" class="responsive"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="syllabus.html">Syllabus</a></li>
+        <li><a href="subscription.html">Subscription</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li class="active"><a href="testimonial.html">Testimonials</a></li>
+        <li><a href="#" data-toggle="modal"
+data-target="#myModal">Contact us</a></li>
+
+      </ul>
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close"
+data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Enquiry Form</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal" action="/action_page.php">
+      <div class="form-group">
+      <label class="control-label col-sm-2" for="username">Name:</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="username"
+placeholder="Enter Your Name" name="username">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Email:</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="email"
+placeholder="Enter Your email" name="email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="mobile">Mobile:</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" id="mobile"
+placeholder="Enter Your Mobile Number" name="mobile">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="query">Query:</label>
+      <div class="col-sm-10">
+        <textarea value=“” placeholder="Enter your query here"
+class="form-control" rows="3"></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-success">Submit</button>
+      </div>
+    </div>
+  </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default"
+data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+    
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="testimonial">
+<div class="container text-center">
+<h3 class="body_header">Testimonials</h3>
+<p class="body_headerText"> Learn what our students and their parents have to say </p>
+
+<div class="row">
+<div class="col-sm-4">
+<div class="panel panel-default">
+  <div class="panel-heading"><p class="testimonial_heading">Arpita Bhuyan</p><p class="testimonial_subhead">SCB Medical College, Odisha</p></div>
+  <div class="panel-body">
+<p class="testimonial_text">Infineety was my best learning companion during my exam preparation. Engaging videos and sample practice papers helped me get better conceptual clarity.</p></div>
+</div>
+</div><!-- end of col-sm-4-->
+<div class="col-sm-4">
+<div class="panel panel-default">
+  <div class="panel-heading"><p class="testimonial_heading">Gayatree Tripathy</p><p class="testimonial_subhead">Hi Tech Medical College, Odisha</p></div>
+  <div class="panel-body">
+<p class="testimonial_text">Infineety has helped me a lot, as it focuses on improving and strengthening concepts. The practice tests and All India Test Series helped me identify my place in a national level.</p></div>
+</div>
+</div><!-- end of col-sm-4-->
+<div class="col-sm-4">
+<div class="panel panel-default">
+  <div class="panel-heading"><p class="testimonial_heading">Sourabh Patil</p><p class="testimonial_subhead">RV Engg College, Bangalore</p></div>
+  <div class="panel-body">
+<p class="testimonial_text">I love all the teachers at Infineety'S!  Infineety'S test series was the best. I practised different kinds of questions to prepare better.Infineety helped me in visualising concepts.</p></div>
+</div>
+</div><!-- end of col-sm-4-->
+</div><!-- end of row div-->
+
+<div class="row">
+<div class="col-sm-4">
+<div class="panel panel-default">
+  <div class="panel-heading"><p class="testimonial_heading">Sharan Anandi</p><p class="testimonial_subhead">Bharati Bidyapith, Pune</p></div>
+  <div class="panel-body">
+<p class="testimonial_text">My experience at Infineety is great and memorable. The teachers and mentors are really helpful and helped me to improve my academic and interpersonal skills. </p></div>
+</div>
+</div><!-- end of col-sm-4-->
+<div class="col-sm-4">
+<div class="panel panel-default">
+  <div class="panel-heading"><p class="testimonial_heading">Sai Prateek</p><p class="testimonial_subhead">OUAT, Odisha</p></div>
+  <div class="panel-body">
+<p class="testimonial_text">My NEET preparation would not have been complete without Infineety. The All India Test Series helped me benchmark my preparation against other aspirants on a national level.</p></div>
+</div>
+</div><!-- end of col-sm-4-->
+<div class="col-sm-4">
+<div class="panel panel-default">
+  <div class="panel-heading"><p class="testimonial_heading">Pranjal Patil</p><p class="testimonial_subhead">Banglore Medical College</p></div>
+  <div class="panel-body">
+<p class="testimonial_text"> Infineety's learning programmes and the daily news analysis they put up was highly helpful in preparing for the current affairs section. It helps me grasp my concepts better and faster.</p></div>
+</div>
+</div><!-- end of col-sm-4-->
+</div><!-- end of row div-->
+
+
+</div><!-- end of container-->
+</div><!-- end of testimonial-->
+
+
+
+
+<div class="fluid-container" style="background-color:#333; padding-top:3%; margin-top:4%;">
+<div class="container">
+<div class="row">
+<div class="col-sm-3 footer">
+<h3 style="color:white;">INFORMATION</H3>
+<ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Videos</a></li>
+        <li><a href="#">Syllabus</a></li>
+        <li><a href="#">Subscription</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+</div>
+<div class="col-sm-5" style="color:white;">
+<h3>CONTACT</H3>
+<h5>Head Office:New Delhi-110049</h6>
+<h5>Brach Office: Bhubaneswar, Cuttack, Sundargarh, Balasore</h5>
+<h5>Mobile: 8847871939, 8337901077, 9853478045</h5>
+</div>
+<div class="col-sm-4">
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+
+<a href="#" class="fa fa-linkedin"></a>
+<a href="#" class="fa fa-youtube"></a>
+</div>
+</div><!-- end of container div-->
+</div><!-- end of fluid-container-->
+
+</body>
+</html>

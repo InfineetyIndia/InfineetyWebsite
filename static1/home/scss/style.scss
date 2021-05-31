@@ -1,0 +1,36 @@
+// Import Bootstrap Compass integration
+@import "bootstrap-scss/bootstrap-compass";
+
+// Import custom Bootstrap variables
+@import "bootstrap-scss/bootstrap-variables";
+
+// Import Bootstrap for Sass
+@import "bootstrap-scss/bootstrap";
+
+@import "custom-scss/resetcss";
+
+// Import animate scss
+@import "plugin-scss/animate.scss";
+
+// Import Select2 scss
+@import "plugin-scss/select2.scss";
+@import "plugin-scss/scrollCSS.scss";
+
+//Import custom varialbles
+@import "custom-scss/custom-variable";
+
+// Import custom-mixing scss
+@import "custom-scss/custom-mixing";
+
+// Import common scss
+@import "custom-scss/common"; 
+
+// Import header scss
+@import "custom-scss/header"; 
+
+// Import footer scss
+@import "custom-scss/footer";
+
+//Import "home-page scss"
+@import "custom-scss/home-page";
+

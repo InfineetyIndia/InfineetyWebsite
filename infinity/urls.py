@@ -20,8 +20,9 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('home.urls', namespace='home-page')),
-    path('user/', include('users.urls', namespace='users'))
+    path('', include('home.urls')),
+    path('user/', include('users.urls', namespace='users')),
+    # path('', include('payments.urls'))
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

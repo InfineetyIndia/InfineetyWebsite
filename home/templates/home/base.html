@@ -1,0 +1,528 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>INFINEETY'S Academy</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="{% static 'home/stylesheet.css' %} ">
+
+  <style type="text/css">
+    .navbar {
+      margin-bottom: 0px;
+    }
+
+    .navbar-default {
+      background-color: #ffffff;
+    }
+
+    .banner_text {
+      color: #3365a2;
+      font-weight: bold;
+    }
+
+    .banner_div {
+      text-align: center;
+      margin-top: 5%;
+    }
+
+    .flex-container {
+      display: flex;
+    }
+
+    .nav-pills a:hover {
+      background-color: none;
+    }
+
+    .navbar-nav>li>a {
+      line-height: 60px;
+    }
+
+
+
+    @media only screen and (min-width: 768px) {
+      .navbar-nav {
+        margin-left: 5%;
+      }
+
+      .mob_banner {
+        display: none;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      .mob_banner {
+        display: block;
+        background-color: #eeeff3;
+        text-align: center;
+        margin-top: 2%;
+      }
+
+      .web_banner {
+        display: none;
+      }
+
+      div.navbar-header {
+        min-height: 80px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <img src="{% static 'home/images/logo1.png' %}" alt="logo" class="responsive"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav menu">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Videos</a></li>
+          <li><a href="#">Syllabus</a></li>
+          <li><a href="#">Subscription</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#myModal">Contact us</a></li>
+
+        </ul>
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Enquiry Form</h4>
+              </div>
+              <div class="modal-body">
+                <form class="form-horizontal" action="/action_page.php">
+                  <div class="form-group">
+                    <label class="control-label col-sm-2" for="username">Name:</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="username" placeholder="Enter Your Name"
+                        name="username">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Email:</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="email" placeholder="Enter Your email" name="email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-sm-2" for="mobile">Mobile:</label>
+                    <div class="col-sm-10">
+                      <input type="number" class="form-control" id="mobile" placeholder="Enter Your Mobile Number"
+                        name="mobile">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-sm-2" for="query">Query:</label>
+                    <div class="col-sm-10">
+                      <textarea value=“” placeholder="Enter your query here" class="form-control" rows="3"></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <button type="submit" class="btn btn-success">Submit</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#" data-toggle="modal" data-target="#signup"><span class="glyphicon glyphicon-user"></span> Sign
+              Up</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#signin"><span class="glyphicon glyphicon-log-in"></span>
+              Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="fluid-container achiever" style="background-color:#eeeff3;">
+    <div class="mob_banner">
+
+      <p class="banner_text" style="font-size:140%; font-weight:normal;">Get Subscription and access unlimited live and
+        recorded videos
+        experienced educators</p>
+      <button type="button" class="btn btn-primary btn-lg" style="margin-top:2%;">Get Subscription</button>
+    </div><!-- end of mob_banner-->
+    <div class="container web_banner">
+      <div class="row">
+        <div class="col-md-7 banner">
+          <img src="{% static 'home/images/banner_img.jpg' %}" alt="banner">
+        </div><!-- end of col-sm-5-->
+
+        <div class="col-md-5 col-sm-12 banner_div">
+
+          <h2 class="banner_text">Learn from the ACHIEVERS</h2>
+          <h1 class="banner_text" style="font-size:280%;font-weight:bold;">To be an ACHIEVERS</h1>
+          <p class="banner_text" style="font-size:140%; font-weight:normal;">Get Subscription and access unlimited live
+            and recorded videos
+            experienced educators</p>
+          <button type="button" class="btn btn-primary btn-lg" style="margin-top:2%;">Get Subscription</button>
+        </div><!-- end of col-sm-6-->
+      </div><!-- end of row div-->
+    </div><!-- end of container div-->
+  </div><!-- end of fluid container div-->
+
+
+
+
+
+  <div class="fluid-container" style="background-color:#eeeff3;">
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4" style="background-color:#01bafd;text-align:center; padding:20px 0px;"><img
+            src="{% static 'home/images/biology1.jpg' %}">
+          <h2><a href="#" style="color:white">BIOLOGY</a></H2>
+        </div>
+        <div class="col-sm-4" style="background-color:#2dcc70;text-align:center; padding:20px 0px;"><img
+            src="{% static 'home/images/physics.jpg' %}">
+          <h2><a href="#" style="color:white">PHYSICS</a></H2>
+        </div>
+        <div class="col-sm-4" style="background-color:#46a0de;text-align:center; padding:20px 0px;"><img
+            src="{% static 'home/images/chemistry.jpg' %}">
+          <h2><a href="#" style="color:white">CHEMISTRY</a></H2>
+        </div>
+      </div>
+      <!--end of row-->
+    </div><!-- end of container div-->
+
+    <div class="fluid-container" style="background-color:#eae0df; padding-bottom:4%;">
+      <div class="container text-center" style="background-color:#eae0df;">
+        <h3 style="font-weight:bold; margin-top:5%;">FEATURES</h3>
+        <p>Education system is organized according to the principles of best practices of learning in the ecosystem</p>
+
+        <div class="row" style="margin-top:5%;">
+          <div class="col-sm-4">
+            <div class="feature_list">
+              <img src="{% static 'home/images/feature-1.jpg' %}">
+              <h4>Unique Classes</h4>
+              <p>Strong concept building with memory coding for easy remembrance.</p>
+              <button type="button" class="btn btn-default">READ MORE</button>
+            </div><!-- end of feature_list-->
+          </div><!-- end of col-sm-4-->
+          <div class="col-sm-4">
+            <div class="feature_list">
+              <img src="{% static 'home/images/feature-2.jpg' %}">
+              <h4>Test & Discussion</h4>
+              <p>Daily tests, weekly tests, monthly tests and NEET mock tests with question answer discussion.</p>
+              <button type="button" class="btn btn-default">READ MORE</button>
+            </div><!-- end of feature_list-->
+          </div><!-- end of col-sm-4-->
+          <div class="col-sm-4">
+            <div class="feature_list">
+              <img src="{% static 'home/images/feature-3.jpg' %}">
+              <h4>Doubt Clearing</h4>
+              <p>Special focus on everyday's one to one doubt clearing. Highly focused program with no doubts uncleared.
+              </p>
+              <button type="button" class="btn btn-default">READ MORE</button>
+            </div><!-- end of feature_list-->
+          </div><!-- end of col-sm-4-->
+        </div><!-- end of row-->
+
+        <div class="row" style="margin-top:5%;">
+          <div class="col-sm-4">
+            <div class="feature_list">
+              <img src="{% static 'home/images/feature-4.jpg' %}">
+              <h4>Monthly Parenting Meeting</h4>
+              <p>Highly interactive sessions to keep parents updated about the student's progress.</p>
+              <button type="button" class="btn btn-default">READ MORE</button>
+            </div><!-- end of feature_list-->
+          </div><!-- end of col-sm-4-->
+          <div class="col-sm-4">
+            <div class="feature_list">
+              <img src="{% static 'home/images/feature-5.jpg' %}">
+              <h4>Materials</h4>
+              <p>High yielding precise NCERT based notes.</p>
+              <button type="button" class="btn btn-default">READ MORE</button>
+            </div><!-- end of feature_list-->
+          </div><!-- end of col-sm-4-->
+          <div class="col-sm-4">
+            <div class="feature_list">
+              <img src="{% static 'home/images/feature-6.jpg' %}">
+              <h4>Motivational Session</h4>
+              <p>To make NEET journey easy.</p>
+              <button type="button" class="btn btn-default">READ MORE</button>
+            </div><!-- end of feature_list-->
+          </div><!-- end of col-sm-4-->
+        </div><!-- end of row-->
+      </div><!-- end of container div-->
+
+    </div><!-- end of fluid-container div-->
+
+
+    <div id="testimonial" class="fluid-container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Carousel indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- Wrapper for carousel items -->
+            <div class="carousel-inner">
+              <div class="item active">
+                <div class="img-box"><img src="{% static 'home/images/user1.jpg' %}" alt=""></div>
+                <p class="testimonial">The faculty and theadmin staff at INFINEETy's have always given me
+                  the confidence to achieve my goals. The teachers are very friendly,
+                  approachable and always available for any sort of help.</p>
+                <p class="overview"><b>Arpita Bhuyan</b>SCB Medical College, Cuttack</p>
+
+              </div>
+              <div class="item">
+                <div class="img-box"><img src="{% static 'home/images/user2.jpg' %}" alt=""></div>
+                <p class="testimonial">INFINEETY has been an excellent experience forme and I feel that I took the
+                  right decision by joining this institute.</p>
+                <p class="overview"><b>Sharan Anandi</b>Bharati Vidyapeeth, Pune</p>
+
+              </div>
+              <div class="item">
+                <div class="img-box"><img src="{% static 'home/images/user3.jpg' %}" alt=""></div>
+                <p class="testimonial">The concepts, illustrations and overall explanation are very detailed.
+                  INFINEETY has helped me nail the basics to perfection and I have a strong
+                  sense of accomplishment at the end of the day.</p>
+                <p class="overview"><b>Utkalika Priyadarshini</b>OUAT, Vet.Sc.</p>
+
+              </div>
+            </div>
+
+
+          </div>
+        </div><!-- end of col-sm-12-->
+      </div><!-- end of row-->
+    </div><!-- end of fluid-container div-->
+
+    <div class="fluid-container" style="background-color:#333; padding-top:3%;">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3 footer">
+            <h3 style="color:white;">INFORMATION</H3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Videos</a></li>
+              <li><a href="#">Syllabus</a></li>
+              <li><a href="#">Subscription</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Testimonials</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-5" style="color:white;">
+            <h3>CONTACT</H3>
+            <h5>Head Office:New Delhi-110049</h6>
+              <h5>Brach Office: Bhubaneswar, Cuttack, Sundargarh, Balasore</h5>
+              <h5>Mobile: 8847871939, 8337901077, 9853478045</h5>
+          </div>
+          <div class="col-sm-4">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-youtube"></a>
+          </div>
+        </div><!-- end of container div-->
+      </div><!-- end of fluid-container-->
+
+      <!-- Modal -->
+      <div class="modal fade" id="signup" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Sign up</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form method="post" id="register_form">
+                {% csrf_token %}
+                <div class="form-group">
+                  <label for="email" class="col-form-label">Email:</label>
+                  <!-- <input type="text" class="form-control" id="email"> -->
+                  {{ form.email }}
+                </div>
+
+                <div class="form-group">
+                  <label for="mobile" class="col-form-label">Mobile No:</label>
+                  <!-- <input type="text" class="form-control" id="mobile"> -->
+                  {{form.phone_no}}
+                </div>
+
+                <div class="form-group">
+                  <label for="password1" class="col-form-label">Password:</label>
+                  <!-- <input type="password" class="form-control" id="password1"> -->
+                  {{form.password1}}
+                </div>
+                <div class="form-group">
+                  <label for="password2" class="col-form-label">Confirm Password:</label>
+                  <!-- <input type="password" class="form-control" id="password2"> -->
+                  {{form.password2}}
+                </div>
+              </form>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button id="register_button" type="submit" class="btn btn-primary">Register</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="signin" tabindex="-1" aria-labelledby="signinModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form method="post" id="login_form">
+                {% csrf_token %}
+                <div class="form-group">
+                  <label for="login-email" class="col-form-label">Email:</label>
+                  <input name="email" type="text" class="form-control" id="login-email">
+                </div>
+
+                <div class="form-group">
+                  <label for="login-password" class="col-form-label">Password:</label>
+                  <input name="password" type="password" class="form-control" id="login-password">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" id="login_button" class="btn btn-primary">Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+      <script type="text/javascript">
+        $('#signup').on('hidden.bs.modal', function () {
+          $(this).find('form').trigger('reset');
+        });
+        $('#signin').on('hidden.bs.modal', function () {
+          $(this).find('form').trigger('reset');
+        });
+        $(document).ready(function () {
+
+          $(document).on('click', "#login_button", function () {
+            var form_data = $('#login_form').serializeArray();
+            console.log(form_data);
+            $.ajax({
+              method: "post",
+              url: '/user/login/',
+              data: form_data,
+              dataType: 'json',
+              success: function (data) {
+                console.log(data)
+                if (data.code == 1) {
+                  $("#signin").modal('hide');
+                  alert('Login successfully.');
+                }
+              }
+            });
+          });
+
+          $(document).on('click', '#register_button', function () {
+            var form_data = $('#register_form').serializeArray();
+            var otp = $('#otp').val();
+            var uid = $("#uid").val();
+            if (otp != undefined) {
+              var otp_obj = {};
+              var user_obj = {};
+              otp_obj.name = 'otp';
+              otp_obj.value = otp;
+              user_obj.name = 'user_id';
+              user_obj.value = $('#uid').val();
+              form_data.push(otp_obj);
+              form_data.push(user_obj);
+            }
+            console.log(form_data);
+
+            $.ajax({
+              method: "post",
+              url: '/user/register/',
+              data: form_data,
+              dataType: 'json',
+              success: function (data) {
+                if (data.code == 1) {
+                  $("#signup").modal('hide');
+                  alert('User register successfully.');
+                }
+
+                user_id = data.user_id;
+                if (otp == undefined) {
+                  var fieldHTML = '<div class="form-group"><label for="otp" class="col-form-label">OTP:</label><input type="hidden" id="uid" value="' + user_id + '"> <input type="text" class="form-control" id="otp"> </div>';
+                  $('body').find('#register_form').append(fieldHTML);
+                }
+              }
+            });
+
+
+          });
+
+        });
+      </script>
+
+      <script>
+        /* Header Scroll */
+        $(window).scroll(function () {
+          if ($(window).scrollTop() > 20) {
+            $('.header-main').addClass('fixed-header');
+          } else {
+            $('.header-main').removeClass('fixed-header');
+          }
+        });
+
+        $(document).ready(function () {
+          $('#quote-carousel').carousel({
+            pause: true, interval: 10000,
+          });
+
+          $("#header-menu").responsiveNav({
+            openSubmenuOnClick: true,
+            offCanvas: true,
+          });
+        });
+      </script>
+
+
+</body>
+
+</html>
