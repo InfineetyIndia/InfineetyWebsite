@@ -112,6 +112,53 @@ padding-top:4%;
   background: #55ACEE;
   color: white;
 }
+.fa-rupee{
+font-size:15px;
+height:15px;
+}
+.fa-rupee:hover{
+color:black;
+opacity:1;
+}
+.flex-container{
+display:flex;
+flex-wrap:wrap;
+}
+.subscribe_div{
+flex:30%;
+padding:0 3%;
+text-align:center;
+}
+.perSub{
+font-weight:normal;
+color:#807f7d;
+}
+.subscribe_btn{
+width:25%;
+margin-bottom:5%;
+margin-top:2%;
+}
+
+.form-group{
+margin-bottom:0px;
+}
+.testimonial{
+background-color:#f6f7f;
+}
+.body_headerText{
+color:#a8adad;
+font-size:22px;
+font-weight:normal;
+font-style:italic;
+margin-bottom:4%;
+}
+
+.details{
+border-radius:10px;
+border:2px solid #dadde3;
+padding:2%;
+margin:4%;
+}
 .footer>ul>li>a{
 color:white;
 text-decoration:none;
@@ -132,4 +179,133 @@ text-decoration:underline;
 .fa-youtube {
   background: #bb0000;
   color: white;
+}
+/*for body header*/
+.body_header{
+font-weight:bold;
+margin-top:5%;
+margin-bottom:3%;
+
+text-transform:uppercase;
+text-align:center;
+}
+.form_well{
+width:80%;
+margin:1% auto;
+}
+.testimonial_heading{
+font-size:120%;
+font-weight:bold;
+}
+.testimonial_subhead{
+font-style:italic;
+font-size:100%;
+}
+.choosePlan{
+    display: flex;
+    margin: 0px auto 28px;
+    border: 1px solid rgb(221, 230, 237);
+    border-radius: 45px;
+    width:60%;
+    
+}
+.science{
+border-radius:inherit;
+flex: 50%;
+background-color:#21409e;
+padding:20px;
+}
+.neet{
+border-radius:inherit;
+flex: 50%;
+padding:20px;
+}
+.choosePlan_anchor{
+padding:30px;
+color:#c1c3c9;
+}
+.choosePlan_anchor:active{
+background-color:#64b4f5;
+}
+.choosePlan_anchor:hover{
+text-decoration:none;
+color:#c1c3c9;
+}
+/*for syllabus*/
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.accordion.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordian_div{
+width:100%;
+}
+.list_border{
+border:1px solid #ddd;
+}
+.chapter{
+padding:10px 15px;
+}
+.chapterName{
+flex-grow:4;
+}
+.subject{
+color:white;
+margin-bottom:5px;
+padding:4px 15px;
+text-transform:uppercase;
+text-align:center;
+}
+.physics{
+background-color:#2dcc70;
+}
+.chemistry{
+background-color:#46a0de;
+}
+.biology{
+background-color:#01bafd;
+}
+
+/*for subscription page*/
+.subscription_header{
+background-color:#01bafd;
+color:white;
+text-align:center;
+font-size:120%;
+font-weight:bold;
+padding:15px;
+width:80%;
+margin-left:10%;
+border-radius:5px;
 }

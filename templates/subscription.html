@@ -2,10 +2,103 @@
 
 {% block body%}
 
+<div class="container text-center" id="subscription">
+<h3 class="body_header">Subscription Details</h3>
+<div class="row">
+<div class="col-sm-6">
+<div class="subscription_header">
+For +2 Foundation Students
+</div><!-- end of sub_header-->
+<form>
+<div class="well form_well">
+<div class="form-group flex-container">
 
-<div style="margin: 200px 600px; ">
-    <H1>Comming soon</H1>
+<div class="subscribe_div">
+    <label class="radio-inline">
+      <input type="radio" name="optradio">1 Month
+    </label>
+</div>
+<div class="subscribe_div">
+ <label class="control-label" for="every month"><span>&#8377;</span> 3000<p class="perSub"><i>per Month</i><p></label>   
 </div>
 
+
+    </div>
+</div><!-- end of well div-->
+
+<div class="well form_well">
+<div class="form-group flex-container">
+<div class="subscribe_div">
+    <label class="radio-inline">
+      <input type="radio" name="optradio">12 Month
+    </label>
+</div>
+
+<div class="subscribe_div">
+ <label class="control-label" for="12 month"><span>&#8377;</span> 30000<p class="perSub"><i>per Year</i><p></label>   
+</div>
+
+    </div>
+</div><!-- end of well div-->
+<button class="btn btn-success subscribe_btn" onclick="document.getElementById("#payment").style.display='none';" >Subscribe Here</button>
+
+</form>
+
+</div><!-- end of col-sm-6-->
+
+<div class="col-sm-6">
+<div class="subscription_header" style="background-color:#004d9f;">
+For NEET Students
+</div><!-- end of sub_header-->
+<form>
+<div class="well form_well">
+<div class="form-group flex-container">
+
+<div class="subscribe_div">
+    <label class="radio-inline">
+      <input type="radio" name="optradio">1 Month
+    </label>
+</div>
+<div class="subscribe_div">
+ <label class="control-label" for="every month"><span>&#8377;</span> 5000<p class="perSub"><i>per Month</i><p></label>   
+</div>
+
+
+    </div>
+</div><!-- end of well div-->
+
+<div class="well form_well">
+<div class="form-group flex-container">
+<div class="subscribe_div">
+    <label class="radio-inline">
+      <input type="radio" name="optradio">12 Month
+    </label>
+</div>
+
+<div class="subscribe_div">
+ <label class="control-label" for="12 month"><span>&#8377;</span> 50000<p class="perSub"><i>per Year</i><p></label>   
+</div>
+
+    </div>
+</div><!-- end of well div-->
+<button class="btn btn-success subscribe_btn" onclick="document.getElementById("#payment").style.display='none';" >Subscribe Here</button>
+
+</form>
+
+</div><!-- end of col-sm-6-->
+</div><!--end of row-->
+
+</div><!-- end of container div-->
+
+<script type="text/javascript">
+function showPayment(){
+ document.getElementById('subscription').style.display="none";
+  
+}
+</script>
+
+
+</body>
+</html>
 
 {% endblock %}

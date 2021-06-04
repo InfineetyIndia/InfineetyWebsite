@@ -184,6 +184,8 @@ text-decoration:underline;
 .body_header{
 font-weight:bold;
 margin-top:5%;
+margin-bottom:3%;
+
 text-transform:uppercase;
 text-align:center;
 }
@@ -199,3 +201,99 @@ font-weight:bold;
 font-style:italic;
 font-size:100%;
 }
+.choosePlan{
+    display: flex;
+    margin: 0px auto 28px;
+    border: 1px solid rgb(221, 230, 237);
+    border-radius: 45px;
+    width:60%;
+    
+}
+.science{
+border-radius:inherit;
+flex: 50%;
+background-color:#21409e;
+padding:20px;
+}
+.neet{
+border-radius:inherit;
+flex: 50%;
+padding:20px;
+}
+.choosePlan_anchor{
+padding:30px;
+color:#c1c3c9;
+}
+.choosePlan_anchor:active{
+background-color:#64b4f5;
+}
+.choosePlan_anchor:hover{
+text-decoration:none;
+color:#c1c3c9;
+}
+/*for syllabus*/
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.accordion.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordian_div{
+width:100%;
+}
+.list_border{
+border:1px solid #ddd;
+}
+.chapter{
+padding:10px 15px;
+}
+.chapterName{
+flex-grow:4;
+}
+.subject{
+color:white;
+margin-bottom:5px;
+padding:4px 15px;
+text-transform:uppercase;
+text-align:center;
+}
+.physics{
+background-color:#2dcc70;
+}
+.chemistry{
+background-color:#46a0de;
+}
+.biology{
+background-color:#01bafd;
+}
+
