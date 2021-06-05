@@ -9,6 +9,7 @@ from django.http import HttpResponse
 # from django.contrib.auth.decorators import login_required
 from home.forms import SignUpForm
 
+from  payments.models import PlanType, Plan
 # Create your views here.
 
 def index(request):
@@ -28,7 +29,16 @@ def features(request):
 
 
 def subscription(request):
-    return render(request,"subscription.html")
+    plan_type = PlanType.objects.all()
+    
+    for type in plan_type:
+       type.plans = Plan.objects.filter(type_id=type.id)
+    
+    context={
+      'plan_type':plan_type
+    }
+    
+    return render(request,"subscription.html", context)
 
 
 def testimonial(request):

@@ -185,7 +185,8 @@
           <p class="banner_text" style="font-size:140%; font-weight:normal;">Get Subscription and access unlimited live
             and recorded videos
             experienced educators</p>
-          <button type="button" class="btn btn-primary btn-lg" style="margin-top:2%;">Get Subscription</button>
+          <a href="subscription" type="button" class="btn btn-primary btn-lg" style="margin-top:2%;">Get
+            Subscription</a>
         </div><!-- end of col-sm-6-->
       </div><!-- end of row div-->
     </div><!-- end of container div-->
@@ -321,222 +322,255 @@
     {% endblock %}
 
     {% block footer %}
-        <div class="fluid-container" style="background-color:#333; padding-top:3%;">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-3 footer">
-                <h3 style="color:white;">INFORMATION</H3>
-                <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Videos</a></li>
-                  <li><a href="#">Syllabus</a></li>
-                  <li><a href="#">Subscription</a></li>
-                  <li><a href="#">Features</a></li>
-                  <li><a href="#">Testimonials</a></li>
-                  <li><a href="#">Contact us</a></li>
-                </ul>
-              </div>
-              <div class="col-sm-5" style="color:white;">
-                <h3>CONTACT</H3>
-                <h5>Head Office:New Delhi-110049</h6>
-                  <h5>Brach Office: Bhubaneswar, Cuttack, Sundargarh, Balasore</h5>
-                  <h5>Mobile: 8847871939, 8337901077, 9853478045</h5>
-              </div>
-              <div class="col-sm-4">
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-twitter"></a>
+    <div class="fluid-container" style="background-color:#333; padding-top:3%;">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3 footer">
+            <h3 style="color:white;">INFORMATION</H3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Videos</a></li>
+              <li><a href="#">Syllabus</a></li>
+              <li><a href="#">Subscription</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Testimonials</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-5" style="color:white;">
+            <h3>CONTACT</H3>
+            <h5>Head Office:New Delhi-110049</h6>
+              <h5>Brach Office: Bhubaneswar, Cuttack, Sundargarh, Balasore</h5>
+              <h5>Mobile: 8847871939, 8337901077, 9853478045</h5>
+          </div>
+          <div class="col-sm-4">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
 
-                <a href="#" class="fa fa-linkedin"></a>
-                <a href="#" class="fa fa-youtube"></a>
-              </div>
-            </div><!-- end of container div-->
-          </div><!-- end of fluid-container-->
-  {% endblock %}
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-youtube"></a>
+          </div>
+        </div><!-- end of container div-->
+      </div><!-- end of fluid-container-->
+      {% endblock %}
 
-          <!-- Modal -->
-          <div class="modal fade" id="signup" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Sign up</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
+      <!-- Modal -->
+      <div class="modal fade" id="signup" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Sign up</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div id="registration-error" class="alert alert-danger alert-dismissible hide">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+              </div>
+              <div id="registration-success" class="alert alert-success alert-dismissible hide">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+              </div>
+              <form method="post" id="register_form">
+                {% csrf_token %}
+                <div class="form-group">
+                  <label for="email" class="col-form-label">Email:</label>
+                  <!-- <input type="text" class="form-control" id="email"> -->
+                  {{ form.email }}
                 </div>
-                <div class="modal-body">
-                  <form method="post" id="register_form">
-                    {% csrf_token %}
-                    <div class="form-group">
-                      <label for="email" class="col-form-label">Email:</label>
-                      <!-- <input type="text" class="form-control" id="email"> -->
-                      {{ form.email }}
-                    </div>
 
-                    <div class="form-group">
-                      <label for="mobile" class="col-form-label">Mobile No:</label>
-                      <!-- <input type="text" class="form-control" id="mobile"> -->
-                      {{form.phone_no}}
-                    </div>
-
-                    <div class="form-group">
-                      <label for="password1" class="col-form-label">Password:</label>
-                      <!-- <input type="password" class="form-control" id="password1"> -->
-                      {{form.password1}}
-                    </div>
-                    <div class="form-group">
-                      <label for="password2" class="col-form-label">Confirm Password:</label>
-                      <!-- <input type="password" class="form-control" id="password2"> -->
-                      {{form.password2}}
-                    </div>
-                  </form>
-
+                <div class="form-group">
+                  <label for="mobile" class="col-form-label">Mobile No:</label>
+                  <!-- <input type="text" class="form-control" id="mobile"> -->
+                  {{form.phone_no}}
                 </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button id="register_button" type="submit" class="btn btn-primary">Register</button>
+
+                <div class="form-group">
+                  <label for="password1" class="col-form-label">Password:</label>
+                  <!-- <input type="password" class="form-control" id="password1"> -->
+                  {{form.password1}}
                 </div>
-              </div>
+                <div class="form-group">
+                  <label for="password2" class="col-form-label">Confirm Password:</label>
+                  <!-- <input type="password" class="form-control" id="password2"> -->
+                  {{form.password2}}
+                </div>
+              </form>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button id="register_button" type="submit" class="btn btn-primary">Register</button>
             </div>
           </div>
+        </div>
+      </div>
 
-          <!-- Modal -->
-          <div class="modal fade" id="signin" tabindex="-1" aria-labelledby="signinModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <form method="post" id="login_form">
-                    {% csrf_token %}
-                    <div class="form-group">
-                      <label for="login-email" class="col-form-label">Email:</label>
-                      <input name="email" type="text" class="form-control" id="login-email">
-                    </div>
-
-                    <div class="form-group">
-                      <label for="login-password" class="col-form-label">Password:</label>
-                      <input name="password" type="password" class="form-control" id="login-password">
-                    </div>
-                  </form>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" id="login_button" class="btn btn-primary">Login</button>
-                </div>
+      <!-- Modal -->
+      <div class="modal fade" id="signin" tabindex="-1" aria-labelledby="signinModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div id="login-error" class="alert alert-danger alert-dismissible hide">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
               </div>
+              <div id="login-success" class="alert alert-success alert-dismissible hide">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+              </div>
+              <form method="post" id="login_form">
+                {% csrf_token %}
+                <div class="form-group">
+                  <label for="login-email" class="col-form-label">Email:</label>
+                  <input name="email" type="text" class="form-control" id="login-email">
+                </div>
+
+                <div class="form-group">
+                  <label for="login-password" class="col-form-label">Password:</label>
+                  <input name="password" type="password" class="form-control" id="login-password">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" id="login_button" class="btn btn-primary">Login</button>
             </div>
           </div>
+        </div>
+      </div>
 
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-          <script type="text/javascript">
-            $(document).ready(function () {
-              var uri = $(location).attr('pathname');
+      <script type="text/javascript">
+        $(document).ready(function () {
+          var uri = $(location).attr('pathname');
 
-              var uri = uri.replace('/', '');
-              if (uri.length !== 0) {
-                $('.menu').removeClass('active');
-              }
-              $('.' + uri).addClass('active');
+          var uri = uri.replace('/', '');
+          if (uri.length !== 0) {
+            $('.menu').removeClass('active');
+          }
+          $('.' + uri).addClass('active');
 
-            })
+        })
 
-          </script>
+      </script>
 
-          <script type="text/javascript">
-            $('#signup').on('hidden.bs.modal', function () {
-              $(this).find('form').trigger('reset');
-            });
-            $('#signin').on('hidden.bs.modal', function () {
-              $(this).find('form').trigger('reset');
-            });
-            $(document).ready(function () {
+      <script type="text/javascript">
+        $('#signup').on('hidden.bs.modal', function () {
+          $(this).find('form').trigger('reset');
+        });
+        $('#signin').on('hidden.bs.modal', function () {
+          $(this).find('form').trigger('reset');
+        });
+        $(document).ready(function () {
 
-              $(document).on('click', "#login_button", function () {
-                var form_data = $('#login_form').serializeArray();
-                console.log(form_data);
-                $.ajax({
-                  method: "post",
-                  url: '/user/login/',
-                  data: form_data,
-                  dataType: 'json',
-                  success: function (data) {
-                    console.log(data)
-                    if (data.code == 1) {
-                      $("#signin").modal('hide');
-                      alert('Login successfully.');
-                    }
-                  }
-                });
-              });
-
-              $(document).on('click', '#register_button', function () {
-                var form_data = $('#register_form').serializeArray();
-                var otp = $('#otp').val();
-                var uid = $("#uid").val();
-                if (otp != undefined) {
-                  var otp_obj = {};
-                  var user_obj = {};
-                  otp_obj.name = 'otp';
-                  otp_obj.value = otp;
-                  user_obj.name = 'user_id';
-                  user_obj.value = $('#uid').val();
-                  form_data.push(otp_obj);
-                  form_data.push(user_obj);
+          $(document).on('click', "#login_button", function () {
+            var form_data = $('#login_form').serializeArray();
+            // console.log(form_data);
+            $.ajax({
+              method: "post",
+              url: '/user/login/',
+              data: form_data,
+              dataType: 'json',
+              success: function (data) {
+                $('#login-error').addClass('hide');
+                $('#login-success').addClass('hide');
+                if (!data.success) {
+                  $('#login-error').html(data.message);
+                  $('#login-error').removeClass('hide');
                 }
-                console.log(form_data);
-
-                $.ajax({
-                  method: "post",
-                  url: '/user/register/',
-                  data: form_data,
-                  dataType: 'json',
-                  success: function (data) {
-                    if (data.code == 1) {
-                      $("#signup").modal('hide');
-                      alert('User register successfully.');
-                    }
-
-                    user_id = data.user_id;
-                    if (otp == undefined) {
-                      var fieldHTML = '<div class="form-group"><label for="otp" class="col-form-label">OTP:</label><input type="hidden" id="uid" value="' + user_id + '"> <input type="text" class="form-control" id="otp"> </div>';
-                      $('body').find('#register_form').append(fieldHTML);
-                    }
-                  }
-                });
-
-
-              });
-
+                console.log(data);
+                if (data.code == 1) {
+                  $('#login-success').html(data.message);
+                  $('#login-success').removeClass('hide');
+                  setTimeout(function () {
+                    $("#signin").modal('hide');
+                  }, 5000);
+                }
+              }
             });
-          </script>
+          });
 
-          <script>
-            /* Header Scroll */
-            $(window).scroll(function () {
-              if ($(window).scrollTop() > 20) {
-                $('.header-main').addClass('fixed-header');
-              } else {
-                $('.header-main').removeClass('fixed-header');
+          $(document).on('click', '#register_button', function () {
+            var form_data = $('#register_form').serializeArray();
+            var otp = $('#otp').val();
+            var uid = $("#uid").val();
+            if (otp != undefined) {
+              var otp_obj = {};
+              var user_obj = {};
+              otp_obj.name = 'otp';
+              otp_obj.value = otp;
+              user_obj.name = 'user_id';
+              user_obj.value = $('#uid').val();
+              form_data.push(otp_obj);
+              form_data.push(user_obj);
+            }
+
+            $.ajax({
+              method: "post",
+              url: '/user/register/',
+              data: form_data,
+              dataType: 'json',
+              success: function (data) {
+                $('#registration-error').addClass('hide');
+                $('#registration-success').addClass('hide');
+                if (!data.success) {
+                  var error_message = Object.values(data.message);
+                  error_message = error_message[0];
+                  $('#registration-error').html(error_message);
+                  $('#registration-error').removeClass('hide');
+                } else {
+                  if (data.code == 1) {
+                    $('#registration-success').html('Register successfully.')
+                    $('#registration-success').removeClass('hide');
+                    setTimeout(function () {
+                      $("#signup").modal('hide');
+                    }, 5000);
+
+                  }
+                  user_id = data.user_id;
+                  if (otp == undefined) {
+                    var fieldHTML = '<div class="form-group"><label for="otp" class="col-form-label">OTP:</label><input type="hidden" id="uid" value="' + user_id + '"> <input type="text" class="form-control" id="otp"> </div>';
+                    $('body').find('#register_form').append(fieldHTML);
+                  }
+                }
+
               }
             });
 
-            $(document).ready(function () {
-              $('#quote-carousel').carousel({
-                pause: true, interval: 10000,
-              });
 
-              $("#header-menu").responsiveNav({
-                openSubmenuOnClick: true,
-                offCanvas: true,
-              });
-            });
-          </script>
+          });
+
+        });
+      </script>
+
+      <script>
+        /* Header Scroll */
+        $(window).scroll(function () {
+          if ($(window).scrollTop() > 20) {
+            $('.header-main').addClass('fixed-header');
+          } else {
+            $('.header-main').removeClass('fixed-header');
+          }
+        });
+
+        $(document).ready(function () {
+          $('#quote-carousel').carousel({
+            pause: true, interval: 10000,
+          });
+
+          $("#header-menu").responsiveNav({
+            openSubmenuOnClick: true,
+            offCanvas: true,
+          });
+        });
+      </script>
 
 
 </body>

@@ -4,6 +4,8 @@ from django.contrib.auth import authenticate
 from django.http import JsonResponse
 from twilio.rest import Client
 import random
+from django.conf import settings
+from twilio.rest.api.v2010.account import message
 
 
 from users.forms import SignUpForm
@@ -17,21 +19,18 @@ import urllib.parse
 def register(request):
     data = request.POST
     otp = data.get('otp', None)
-    print(otp)
     if otp is not None :
-        print(1)
         user_id = data.get('user_id', None)
-        print(user_id)
         user = Users.objects.get(id=user_id)
         if user.token == otp:
            user.is_active = True
            user.save() 
            return JsonResponse({'success':True, 'message': 'Register successfully.','code':1})
         else:
-            return JsonResponse({'success':False , 'message' : 'Not a valid otp.','code':0})
+            message = {'otp':'Not a valid otp.'}
+            return JsonResponse({'success':False , 'message' : message,'code':0})
 
     elif  request.method == 'POST':
-        print(2)
         form = SignUpForm(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
@@ -40,13 +39,14 @@ def register(request):
             user.token = token
             user.save()
             data = {'user_id': user.id, 'success': True, 'code' : 0}
-            sendSMS(token)
+            sendSMS(token, user.phone_no)
             return JsonResponse(data)
         else:
             err=form.errors
             return JsonResponse({'success': False, 'message' : err, 'code': 0})
     else:
-        data = {'success': False, 'message' : 'Some problem occured.', 'code' : 0}
+        message = {'otp':'Some problem occured.'}
+        data = {'success': False, 'message' : message, 'code' : 0}
         return JsonResponse(data)   
 
 def login(request):
@@ -61,20 +61,20 @@ def login(request):
         data = {'success': False, 'message':'Not a valid credentials.', 'code': 0}
         return JsonResponse(data)  
 
-def generate_token(lenght = 4):
+def generate_token(length = 4):
     allowed_chars = "0123456789"
-    return ''.join(random.choice(allowed_chars) for x in range(lenght))
+    return ''.join(random.choice(allowed_chars) for x in range(length))
 
  
-def sendSMS(token, to = "918287353243"):
-    account_sid = "AC9a5170da1100f4cc31c63370603b1b4e"
-    auth_token = "d9b47a8be68f09bc2a82a97b33a23c8e"
+def sendSMS(token, to = "8287353243"):
+    account_sid = settings.TWILLIO_ACCOUNT_SID
+    auth_token = settings.TWILLO_AUTH_TOKEN
     client = Client(account_sid, auth_token)
 
     message = client.messages.create(
                      body = token,
-                     from_ = '+12673968299',
-                     to = '+918287353243'
+                     from_ = settings.TWILLIO_FROM_NUMBER,
+                     to = '+91'+ to
                  )
 
     print(message.sid)

@@ -80,23 +80,23 @@ WSGI_APPLICATION = 'infinity.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'infinity',
-    #     'USER': 'root',
-    #     'PASSWORD': 'tech',
-    #     'HOST': 'localhost',
-    #     'PORT': '3306'
-    # }
-
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'infinity',
-        'USER': 'infinity',
-        'PASSWORD': 'infinity',
-        'HOST': 'infinity.covtigb2stq9.ap-south-1.rds.amazonaws.com',
+        'USER': 'root',
+        'PASSWORD': 'tech',
+        'HOST': 'localhost',
         'PORT': '3306'
     }
+
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'infinity',
+    #     'USER': 'infinity',
+    #     'PASSWORD': 'infinity',
+    #     'HOST': 'infinity.covtigb2stq9.ap-south-1.rds.amazonaws.com',
+    #     'PORT': '3306'
+    # }
 }
 
 
@@ -158,3 +158,7 @@ PAYTM_WEBSITE = 'WEBSTAGING'
 PAYTM_CHANNEL_ID = 'WEB'
 PAYTM_INDUSTRY_TYPE_ID = 'Retail'
 CALLBACK_URL='https://infineety.com/callback/'
+
+TWILLIO_ACCOUNT_SID = 'AC9a5170da1100f4cc31c63370603b1b4e'
+TWILLO_AUTH_TOKEN = '329265af5a07809ee0aa7f0b2f6790ba'
+TWILLIO_FROM_NUMBER = '+12673968299'
