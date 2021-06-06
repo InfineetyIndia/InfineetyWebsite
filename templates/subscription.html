@@ -4,20 +4,37 @@
 
 <div class="container text-center" id="subscription">
   <h3 class="body_header">Subscription Details</h3>
+  
+  {% if error %}
+  <div id="subscription-error" class="alert alert-danger alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    {{error}}
+  </div>
+  {% endif %}
+
+  {% if success %}
+  <div id="subscription-success" class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    {{success}}
+  </div>
+  {% endif %}
+
   <div class="row">
     {% for type in plan_type %}
     <div class="col-sm-6">
       <div class="subscription_header"  {% if type.name == 'NEET' %} style="background-color:#004d9f;" {% endif %}>
         {{type.display_name}}
       </div><!-- end of sub_header-->
-      <form>
+      <form class="payment" method="post" action="pay/">
+        {% csrf_token %}
         {% for plan in type.plans %}
         <div class="well form_well">
           <div class="form-group flex-container">
 
             <div class="subscribe_div">
               <label class="radio-inline">
-                <input type="radio" name="optradio">{% if plan.name == 'Anually' %} 12 {% else %} 1 {% endif %} Month
+                <!-- <input type="hidden" name="plan_id" value="{{plan.id}}"> -->
+                <input type="radio" value="{{plan.price}}_{{plan.id}}" name="amount">{% if plan.name == 'Anually' %} 12 {% else %} 1 {% endif %} Month
               </label>
             </div>
             <div class="subscribe_div">
@@ -31,8 +48,7 @@
         </div><!-- end of well div-->
         {% endfor %}
         
-        <button class="btn btn-success subscribe_btn" onclick="document.getElementById(" #payment").style.display='none'
-          ;">Subscribe Here</button>
+        <button type="submit" class="btn btn-success subscribe_btn" >Subscribe Here</button>
 
       </form>
 

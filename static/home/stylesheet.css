@@ -142,9 +142,9 @@ margin-top:2%;
 .form-group{
 margin-bottom:0px;
 }
-.testimonial{
+/*.testimonial{
 background-color:#f6f7f;
-}
+}*/
 .body_headerText{
 color:#a8adad;
 font-size:22px;
@@ -196,10 +196,12 @@ margin:1% auto;
 .testimonial_heading{
 font-size:120%;
 font-weight:bold;
+color:#004d9d;
 }
 .testimonial_subhead{
 font-style:italic;
 font-size:100%;
+color:#00adec;
 }
 .choosePlan{
     display: flex;

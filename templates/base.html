@@ -155,8 +155,14 @@
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#" data-toggle="modal" data-target="#signup"><span class="glyphicon glyphicon-user"></span> Sign
               Up</a></li>
-          <li><a href="#" data-toggle="modal" data-target="#signin"><span class="glyphicon glyphicon-log-in"></span>
-              Login</a></li>
+          {% if user.is_authenticated %}
+          <li><a href="user/logout" ><span class="glyphicon glyphicon-log-in"></span>
+              Logout</a></li>
+          {% else %}
+              <li><a href="#" data-toggle="modal" data-target="#signin"><span class="glyphicon glyphicon-log-in"></span>
+            Login</a></li>
+          {% endif %}
+          
         </ul>
       </div>
     </div>
@@ -490,8 +496,10 @@
                   $('#login-success').html(data.message);
                   $('#login-success').removeClass('hide');
                   setTimeout(function () {
-                    $("#signin").modal('hide');
-                  }, 5000);
+                    // $("#signin").modal('hide');
+                    window.location.href = '/';
+                    // location.reload();
+                  }, 3000);
                 }
               }
             });
@@ -531,7 +539,7 @@
                     $('#registration-success').removeClass('hide');
                     setTimeout(function () {
                       $("#signup").modal('hide');
-                    }, 5000);
+                    }, 3000);
 
                   }
                   user_id = data.user_id;

@@ -1,11 +1,13 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate, login
 from django.http import JsonResponse
 from twilio.rest import Client
 import random
 from django.conf import settings
 from twilio.rest.api.v2010.account import message
+from django.contrib.auth import logout
+
 
 
 from users.forms import SignUpForm
@@ -49,12 +51,13 @@ def register(request):
         data = {'success': False, 'message' : message, 'code' : 0}
         return JsonResponse(data)   
 
-def login(request):
+def login_view(request):
     email = request.POST.get('email', None)
     password = request.POST.get('password', None)
     user = authenticate(username=email, password=password)
     
     if user is not None:
+        login(request, user)
         data = {'success': True, 'message':'Logged in successfully.', 'code': 1}
         return JsonResponse(data)  
     else:
@@ -78,6 +81,10 @@ def sendSMS(token, to = "8287353243"):
                  )
 
     print(message.sid)
+
+def logout_view(request):
+    logout(request)
+    return redirect('/')
 
 
 

@@ -17,25 +17,33 @@ def index(request):
     return render(request, "base.html", {'form': form})
 
 def videos(request):
-    return render(request,"videos.html")
+    form = SignUpForm()
+    return render(request,"videos.html", {'form': form})
 
 
 def syllabus(request):
-    return render(request,"syllabus.html")
+    form = SignUpForm()
+    return render(request,"syllabus.html", {'form': form})
 
 
 def features(request):
-    return render(request,"features.html")
+    form = SignUpForm()
+    return render(request,"features.html", {'form': form})
 
 
 def subscription(request):
+    form = SignUpForm()
+    error = request.GET.get('error', None)
+
     plan_type = PlanType.objects.all()
     
     for type in plan_type:
        type.plans = Plan.objects.filter(type_id=type.id)
     
     context={
-      'plan_type':plan_type
+      'plan_type':plan_type,
+      'error' : error,
+      'form' : form
     }
     
     return render(request,"subscription.html", context)
