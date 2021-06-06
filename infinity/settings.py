@@ -27,8 +27,8 @@ SECRET_KEY = 'django-insecure-vae&ls!#v5ld$u4c)few#1s%ez@lyd#32o)8himf-p%-+k*p2!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ec2-13-232-49-253.ap-south-1.compute.amazonaws.com','0.0.0.0','infineety.com','3.108.45.28']
-# ALLOWED_HOSTS = ["*"]
+# ALLOWED_HOSTS = ['ec2-13-232-49-253.ap-south-1.compute.amazonaws.com','0.0.0.0','infineety.com','3.108.45.28']
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -80,23 +80,23 @@ WSGI_APPLICATION = 'infinity.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'infinity',
-    #     'USER': 'root',
-    #     'PASSWORD': 'tech',
-    #     'HOST': 'localhost',
-    #     'PORT': '3306'
-    # }
-
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'infinity',
-        'USER': 'infinity',
-        'PASSWORD': 'infinity',
-        'HOST': 'infinity.covtigb2stq9.ap-south-1.rds.amazonaws.com',
+        'USER': 'root',
+        'PASSWORD': 'tech',
+        'HOST': 'localhost',
         'PORT': '3306'
     }
+
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'infinity',
+    #     'USER': 'infinity',
+    #     'PASSWORD': 'infinity',
+    #     'HOST': 'infinity.covtigb2stq9.ap-south-1.rds.amazonaws.com',
+    #     'PORT': '3306'
+    # }
 }
 
 
@@ -161,5 +161,5 @@ CALLBACK_URL='https://infineety.com/callback/'
 # CALLBACK_URL='http://127.0.0.1:8000/callback/'
 
 TWILLIO_ACCOUNT_SID = 'AC9a5170da1100f4cc31c63370603b1b4e'
-TWILLO_AUTH_TOKEN = '329265af5a07809ee0aa7f0b2f6790ba'
+TWILLO_AUTH_TOKEN = '4b91505cdda7cbe686bee6072ef155b7'
 TWILLIO_FROM_NUMBER = '+12673968299'
