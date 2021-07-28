@@ -80,6 +80,9 @@ padding:0px 14%;
 	border: none;
 	background: #888;		
 }
+.foundation{
+font-size:140%;
+}
 #testimonial{
  background: black url("images/testimonial_bg.jpg") no-repeat;
  background-size:cover;
@@ -142,15 +145,18 @@ margin-top:2%;
 .form-group{
 margin-bottom:0px;
 }
-.testimonial{
+/*.testimonial{
 background-color:#f6f7f;
-}
+}*/
 .body_headerText{
-color:#a8adad;
+color:#fff;
 font-size:22px;
-font-weight:normal;
+font-weight:bold;
 font-style:italic;
 margin-bottom:4%;
+background-color:#034b9d;
+border-radius:10px;
+
 }
 
 .details{
@@ -196,10 +202,12 @@ margin:1% auto;
 .testimonial_heading{
 font-size:120%;
 font-weight:bold;
+color:#004d9d;
 }
 .testimonial_subhead{
 font-style:italic;
 font-size:100%;
+color:#00adec;
 }
 .choosePlan{
     display: flex;
@@ -281,21 +289,27 @@ padding:10px 15px;
 flex-grow:4;
 }
 .subject{
-color:white;
 margin-bottom:5px;
 padding:4px 15px;
 text-transform:uppercase;
 text-align:center;
+font-weight:bold;
+color:white;
 }
+
 .physics{
-background-color:#2dcc70;
+background-color: #2dcc70;
+
 }
 .chemistry{
-background-color:#46a0de;
+background-color: #46a0de;
+
 }
 .biology{
-background-color:#01bafd;
+background-color: #01bafd;
+
 }
+
 
 /*for subscription page*/
 .subscription_header{
@@ -308,4 +322,30 @@ padding:15px;
 width:80%;
 margin-left:10%;
 border-radius:5px;
+}
+
+/* for feature page*/
+
+.feature_heading{
+    background-color: #606163;
+    color: white;
+    margin-left: 15px;
+    border-radius: 0px 10px 10px 0px;
+    width: fit-content;
+    padding: 5px;
+}
+.feature_text{
+font-size:150%;
+color:#606163;
+line-height:2;
+
+}
+.feature_link{
+font-size:120%;
+color:#606163;
+
+
+}
+.feature_td{
+text-align:center;
 }

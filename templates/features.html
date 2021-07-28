@@ -1,11 +1,139 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block body%}
 
 
-<div style="margin: 200px 600px; ">
+<!-- <div style="margin: 200px 600px; ">
     <H1>Comming soon</H1>
-</div>
+</div> -->
 
+<div class="container">
+    <table class="table table-bordered" style="margin-top:4%;">
+    <tbody>
+    <tr>
+    <td class="feature_td success"><a href="#unique" class="feature_link">Unique Classes</a></td>
+    <td class="feature_td danger"><a href="#test" class="feature_link">Test & Discussion</a></td>
+    <td class="feature_td info"><a href="#doubt" class="feature_link">Doubt Clearing</a></td>
+    </tr>
+    <tr>
+    <td class="feature_td warning"><a href="#ptm" class="feature_link">Monthly Parenting Meeting</a></td>
+    <td class="feature_td active"><a href="#material" class="feature_link">Materials</a></td>
+    <td class="feature_td success"><a href="#motivation" class="feature_link">Motivational Session</a></td>
+    </tr>
+    </tbody>
+    </table>
+    
+    <div class="row">
+        <div id="unique">
+        <h2 class="feature_heading">Unique Classes</h2>
+        </div><!-- end of feature_heading-->
+        <div class="col-sm-6">
+        <img src="{% static 'home/images/unique class1.jpg' %}" alt="unique classes">
+        </div><!-- end of col-sm-6-->
+        <div class="col-sm-6">
+        <ul class="feature_text">
+        <li>We give option to draw, collaborate with students in real-time with live virtual classes.</li>
+        <li>We record the live classes and share the same with all our students</li>
+        <li>Real time interaction between Teachers and Students in Classwork, Assignments and through e-Tests</li>
+        <li>We are ready 24*7 to clear students doubt</li>
+        <li>Always available in WHATSAPP to solve the problem of each and every students</li>
+        </ul>
+        </div><!-- end of col-sm-6-->
+        </div><!-- end of row -->
+        
+        <div class="row">
+        <div id="test">
+        <h2 class="feature_heading">Test & Discussion</h2>
+        </div><!-- end of feature_heading-->
+        
+        <div class="col-sm-6">
+        <ul class="feature_text">
+        <li>We will Conduct Test Weekly Basis</li>
+        <li>After the test result, having a group discussion to clear the doubts</li>
+        <li>Everyday share the questions to solve and discussion about the answers</li>
+        <li>Monthly conduct Test to analyze the Students progress</li>
+        <li>Attempt Mock Tests that match NEET on chapter weightage, difficulty and cognitive skills</li>
+        </ul>
+        </div><!-- end of col-sm-6-->
+        <div class="col-sm-6">
+        <img src="{% static 'home/images/test1.jpg' %}" alt="unique classes">
+        </div><!-- end of col-sm-6-->
+        </div><!-- end of row -->
+        
+        <div class="row">
+        <div id="doubt">
+        <h2 class="feature_heading">Doubt Clearing</h2>
+        </div><!-- end of feature_heading-->
+        <div class="col-sm-6">
+        <img src="{% static 'home/images/doubt1.jpg' %}" alt="Doubt clearing">
+        </div><!-- end of col-sm-6-->
+        <div class="col-sm-6">
+        <ul class="feature_text">
+        <li>Clearing students doubt is our main priority</li>
+        <li>Before starting the class solve the problems of each and every student</li>
+        <li>Clear the old stuff before progressing further is important for the strong foundation</li>
+        <li>Available in WHATSAPP calls and messages to clear doubts</li>
+        <li>We ensure Individual care in a friendly learning enviroment for better understanding and preparation </li>
+        </ul>
+        </div><!-- end of col-sm-6-->
+        </div><!-- end of row -->
+        
+        <div class="row">
+        <div id="ptm">
+        <h2 class="feature_heading">Monthly Parenting Meeting</h2>
+        </div><!-- end of feature_heading-->
+        
+        <div class="col-sm-6">
+        <ul class="feature_text">
+        <li>Sharing Students everyday performance in that month</li>
+        <li>Past successful student sharing their strategy</li>
+        <li>Feedback from the student</li>
+        <li>Suggestions from students and parents</li>
+        <li>Parents can reach to us anytime</li>
+        </ul>
+        </div><!-- end of col-sm-6-->
+        <div class="col-sm-6">
+        <img src="{% static 'home/images/ptm1.jpg' %}" alt="unique classes">
+        </div><!-- end of col-sm-6-->
+        </div><!-- end of row -->
+        
+        <div class="row">
+        <div id="material">
+        <h2 class="feature_heading">Materials</h2>
+        </div><!-- end of feature_heading-->
+        <div class="col-sm-6">
+        <img src="{% static 'home/images/materials1.jpg' %}" alt="Materials">
+        </div><!-- end of col-sm-6-->
+        <div class="col-sm-6">
+        <ul class="feature_text">
+        <li>We share interactive PDF for better understanding</li>
+        <li>Enrolled students can get the recorded video</li>
+        <li>Students can see the recorded videos for better conceptualization</li>
+        <li>Our NEET study material is an accumulated version of the complete syllabus</li>
+        <li>The NEET syllabus 2021 is prepared on the basis of Class11 and 12 syllabi of Physics, Chemistry and Biology</li>
+        </ul>
+        </div><!-- end of col-sm-6-->
+        </div><!-- end of row -->
+        
+        <div class="row">
+        <div id="motivation">
+        <h2 class="feature_heading">Motivational Session</h2>
+        </div><!-- end of feature_heading-->
+        
+        <div class="col-sm-6">
+        <ul class="feature_text">
+        <li>We understand motivation is a primary factor for NEET Preparation</li>
+        <li>Every class start with 10 mins of Motivational talking</li>
+        <li>Your competition is not with other aspirants in reality they are, but should not be in your mind</li>
+        <li>In your monthly or practice tests, always set a target on how many marks you should get in it </li>
+        <li>One important thing for good NEET preparation is your interest in subjects – Physics, Chemistry and Biology</li>
+        </ul>
+        </div><!-- end of col-sm-6-->
+        <div class="col-sm-6">
+        <img src="{% static 'home/images/motivation1.jpg' %}" alt="Motivational session">
+        </div><!-- end of col-sm-6-->
+        </div><!-- end of row -->
+        
+        </div><!-- end of container-->
 
 {% endblock %}

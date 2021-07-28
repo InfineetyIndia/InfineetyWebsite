@@ -80,6 +80,363 @@ padding:0px 14%;
 	border: none;
 	background: #888;		
 }
+.foundation{
+font-size:140%;
+}
+#testimonial{
+ background: black url("images/testimonial_bg.jpg") no-repeat;
+ background-size:cover;
+padding-top:4%;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 50px;
+  height:50px;
+  border-radius:50%;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 5px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+    color:white;
+   text-decoration:none;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-rupee{
+font-size:15px;
+height:15px;
+}
+.fa-rupee:hover{
+color:black;
+opacity:1;
+}
+.flex-container{
+display:flex;
+flex-wrap:wrap;
+}
+.subscribe_div{
+flex:30%;
+padding:0 3%;
+text-align:center;
+}
+.perSub{
+font-weight:normal;
+color:#807f7d;
+}
+.subscribe_btn{
+width:25%;
+margin-bottom:5%;
+margin-top:2%;
+}
+
+.form-group{
+margin-bottom:0px;
+}
+/*.testimonial{
+background-color:#f6f7f;
+}*/
+.body_headerText{
+color:#fff;
+font-size:22px;
+font-weight:bold;
+font-style:italic;
+margin-bottom:4%;
+background-color:#034b9d;
+border-radius:10px;
+
+}
+
+.details{
+border-radius:10px;
+border:2px solid #dadde3;
+padding:2%;
+margin:4%;
+}
+.footer>ul>li>a{
+color:white;
+text-decoration:none;
+margin-bottom:10%;
+font-size:15px;
+}
+.footer>ul>li>a:hover{
+color:white;
+text-decoration:underline;
+}
+
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+/*for body header*/
+.body_header{
+font-weight:bold;
+margin-top:5%;
+margin-bottom:3%;
+
+text-transform:uppercase;
+text-align:center;
+}
+.form_well{
+width:80%;
+margin:1% auto;
+}
+.testimonial_heading{
+font-size:120%;
+font-weight:bold;
+color:#004d9d;
+}
+.testimonial_subhead{
+font-style:italic;
+font-size:100%;
+color:#00adec;
+}
+.choosePlan{
+    display: flex;
+    margin: 0px auto 28px;
+    border: 1px solid rgb(221, 230, 237);
+    border-radius: 45px;
+    width:60%;
+    
+}
+.science{
+border-radius:inherit;
+flex: 50%;
+background-color:#21409e;
+padding:20px;
+}
+.neet{
+border-radius:inherit;
+flex: 50%;
+padding:20px;
+}
+.choosePlan_anchor{
+padding:30px;
+color:#c1c3c9;
+}
+.choosePlan_anchor:active{
+background-color:#64b4f5;
+}
+.choosePlan_anchor:hover{
+text-decoration:none;
+color:#c1c3c9;
+}
+/*for syllabus*/
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.accordion.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordian_div{
+width:100%;
+}
+.list_border{
+border:1px solid #ddd;
+}
+.chapter{
+padding:10px 15px;
+}
+.chapterName{
+flex-grow:4;
+}
+.subject{
+margin-bottom:5px;
+padding:4px 15px;
+text-transform:uppercase;
+text-align:center;
+font-weight:bold;
+color:white;
+}
+
+.physics{
+background-color: #2dcc70;
+
+}
+.chemistry{
+background-color: #46a0de;
+
+}
+.biology{
+background-color: #01bafd;
+
+}
+
+
+/*for subscription page*/
+.subscription_header{
+background-color:#01bafd;
+color:white;
+text-align:center;
+font-size:120%;
+font-weight:bold;
+padding:15px;
+width:80%;
+margin-left:10%;
+border-radius:5px;
+}
+
+/* for feature page*/
+
+.feature_heading{
+    background-color: #606163;
+    color: white;
+    margin-left: 15px;
+    border-radius: 0px 10px 10px 0px;
+    width: fit-content;
+    padding: 5px;
+}
+.feature_text{
+font-size:150%;
+color:#606163;
+line-height:2;
+
+}
+.feature_link{
+font-size:120%;
+color:#606163;
+
+
+}
+.feature_td{
+text-align:center;
+}
+
+
+
+
+
+
+/* .carousel {
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 50px;
+}
+.carousel .item {
+	color: #fff;
+	font-size: 16px;
+    text-align: center;
+	overflow: hidden;
+    min-height: 340px;
+padding:0px 14%;
+}
+.carousel .item a {
+	color: #fff;
+}
+.carousel .img-box {
+	width: 145px;
+	height: 145px;
+	margin: 0 auto;
+	border-radius: 50%;
+}
+.carousel .img-box img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	border-radius: 50%;
+}
+.carousel .testimonial {	
+	padding: 30px 0 10px;
+}
+.carousel .overview {	
+	text-align: center;
+	padding-bottom: 5px;
+}
+.carousel .overview b {
+	color: #fff;
+	font-size: 15px;
+	text-transform: uppercase;
+	display: block;	
+	padding-bottom: 5px;
+}
+.carousel .star-rating i {
+	font-size: 18px;
+	color: #ffdc12;
+}
+.carousel .carousel-control {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+    background: #999;
+    text-shadow: none;
+	top: 4px;
+}
+.carousel-control i {
+	font-size: 20px;
+	margin-right: 2px;
+}
+.carousel-control.left {
+	left: auto;
+	right: 40px;
+}
+.carousel-control.right i {
+	margin-right: -2px;
+}
+.carousel .carousel-indicators {
+	bottom: 15px;
+}
+.carousel-indicators li, .carousel-indicators li.active {
+	width: 11px;
+	height: 11px;
+	margin: 1px 5px;
+	border-radius: 50%;
+}
+.carousel-indicators li {	
+	background: #e2e2e2;
+	border-color: transparent;
+}
+.carousel-indicators li.active {
+	border: none;
+	background: #888;		
+}
 #testimonial{
  background: black url("images/testimonial_bg.jpg") no-repeat;
  background-size:cover;
@@ -296,4 +653,4 @@ background-color:#46a0de;
 .biology{
 background-color:#01bafd;
 }
-
+ */
